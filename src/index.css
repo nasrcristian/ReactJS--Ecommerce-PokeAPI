@@ -8,7 +8,7 @@
 }
 
 body{
-  background-color: #CFEE9E;
+  background-color: rgba(136, 106, 7, 0.212);
   }
 
 .d-FlexRow {
@@ -19,7 +19,11 @@ body{
 .navBar{
   display:flex;
   justify-content: space-between;
-  background-image: url("../public/images/wave.svg");
+  background: rgba(255, 0, 34, 0.493);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(1.7px);
+  -webkit-backdrop-filter: blur(1.7px);
+
   height: 12vh;
 }
 
@@ -40,15 +44,70 @@ body{
   justify-self: right;
 }
 
-.Botonera a {
-  color:rgb(6, 73, 17);
-  text-decoration: none;
-  font-size: 22px;
-  margin: 4vh 10vw;
+.Botonera li{
   list-style: none;
 }
 
+.Botonera a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  margin: 4vh 10vw;
+  min-width: 130px;
+  height: 40px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  overflow: hidden;
+  border: 2px solid #63264A;
+  color: #F3F9D2;
+  background: #860606;
+}
+.Botonera a:hover {
+  color: #860606;
+}
+.Botonera a:hover:after {
+  width: 100%;
+}
+.Botonera a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #F3F9D2;
+  color: #860606;
+}
+
+.counterBtn{
+    height: 30px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-color: #1658af;
+}
+.counterBtn:hover {
+  background-position: right center;
+}
+
 .mainContainer{
-  margin-top: 15vh;
-  margin-left: 15vw;
+  margin-top: 1vh;
+  margin-left: 30vw;
 }

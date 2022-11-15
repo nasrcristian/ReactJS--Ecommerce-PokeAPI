@@ -1,5 +1,5 @@
+import { NavLink } from "react-router-dom"
 import { CartWidget, Logo } from "./NavIcons"
-import { BotonNavegacion } from "./BotonNavegacion"
 
 const Navbar =()=>{
 
@@ -7,9 +7,9 @@ const Navbar =()=>{
         <nav className="navBar">
             <Logo name="Pokemon Store"/>
             <ul className="Botonera d-FlexRow">
-                <BotonNavegacion ruta="./index.html" nombreBoton="Tipos"/>
-                <BotonNavegacion ruta="./datos.html" nombreBoton="Datos"/>
-                <BotonNavegacion ruta="./habitat.html" nombreBoton="Habitat"/>
+                <li><NavLink className="Botonera" to="/">Home</NavLink></li>
+                <li><NavLink className="Botonera" to="/pokemones">Tipos</NavLink></li>
+                <li><NavLink className="Botonera" to="/habitat">Habitat</NavLink></li>
             </ul>
             <CartWidget />
         </nav>
