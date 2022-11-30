@@ -8,106 +8,22 @@
 }
 
 body{
-  background-color: rgba(136, 106, 7, 0.212);
+  background-color: rgba(7, 136, 97, 0.212);
   }
 
 .d-FlexRow {
   display: flex;
-  flex-direction: row;
+  flex-direction: row!important;
 }
 
-.navBar{
-  display:flex;
-  justify-content: space-between;
-  background: rgba(255, 0, 34, 0.493);
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(1.7px);
-  -webkit-backdrop-filter: blur(1.7px);
+button{
+  background: rgba(0, 8, 117, 0.822);;
+  color: rgb(255, 248, 220);
 
-  height: 12vh;
 }
-
-.logoContainer h2 {
-  margin-left: 10px;
-  margin-top: 25px;
-}
-
-.logo{
-  width: 80px;
-  height: 80px;
-  margin-top: 0;
-}
-.carrito{
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  justify-self: right;
-}
-
-.Botonera li{
-  list-style: none;
-}
-
-.Botonera a{
-  text-align: center;
-  text-decoration: none;
-  font-size: 22px;
-  margin: 4vh 10vw;
-  min-width: 130px;
-  height: 40px;
-  padding: 5px 10px;
-  font-weight: bold;
+button:hover{
+  background: rgb(255,255,255);
+  background: linear-gradient(40deg, rgba(255,255,255,1) 28%, rgba(255,202,212,1) 61%, rgba(244,172,183,1) 100%);
+  color:rgb(2, 1, 0);
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  z-index: 0;
-  overflow: hidden;
-  border: 2px solid #63264A;
-  color: #F3F9D2;
-  background: #860606;
-}
-.Botonera a:hover {
-  color: #860606;
-}
-.Botonera a:hover:after {
-  width: 100%;
-}
-.Botonera a:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s ease;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background: #F3F9D2;
-  color: #860606;
-}
-
-.counterBtn{
-    height: 30px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background-size: 120% auto;
-    background-color: #1658af;
-}
-.counterBtn:hover {
-  background-position: right center;
-}
-
-.mainContainer{
-  margin-top: 1vh;
-  margin-left: 30vw;
 }

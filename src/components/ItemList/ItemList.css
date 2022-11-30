@@ -1,0 +1,111 @@
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(400px, 100vw, 500px);
+    height: 25vh;
+    min-height: 225px;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    border: 1px black solid;
+    margin: 3vh 3vw
+}
+
+.cardContainer a{
+    text-decoration: none;
+    color: black;
+}
+
+.cardContainer section{
+    padding: 15px ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardContainer .detailsContainer div {
+    margin: 0.5em 0;
+}
+
+.cardContainer .detailsContainer h4 {
+    margin: 0.2em;
+}
+
+.cardContainer h2 {
+    font-size: 25px;
+    margin-top: 0px ;
+}
+.cardContainer img {
+    width: clamp(50px, 100%, 150px);
+    margin-top: 0px ;
+}
+
+.cardContainer .typesContainer span {
+    width: 7em;
+    text-align: center;
+    display: inline-block;
+    border: 0.1em solid black;
+    color: rgb(0, 0, 0);
+    padding: 0.4em 0.6em 0.6em;
+    margin: 0.1em;
+    border-radius: 0.4em;
+}
+
+.grassBackground {
+    background-color: rgba(35, 177, 0, 0.7);
+}
+.fireBackground {
+    background-color: rgba(255, 115, 0, 0.7);
+}
+.waterBackground {
+    background-color: rgba(2, 90, 173, 0.7);
+}
+.bugBackground {
+    background-color: rgba(142, 173, 2, 0.7);
+}
+.flyingBackground {
+    background-color: rgba(13, 66, 211, 0.7);
+}
+.normalBackground {
+    background-color: rgba(212, 214, 107, 0.7);
+}
+.poisonBackground {
+    background-color: rgba(90, 1, 131, 0.7);
+}
+.electricBackground {
+    background-color: rgba(211, 208, 19, 0.7);
+}
+.groundBackground {
+    background-color: rgba(173, 126, 39, 0.7);
+}
+.fairyBackground {
+    background-color: rgba(248, 165, 248, 0.7);
+}
+.fightingBackground {
+    background-color: rgba(211, 25, 19, 0.7);
+}
+.rockBackground {
+    background-color: rgba(107, 44, 8, 0.7);
+}
+.psychicBackground {
+    background-color: rgba(211, 7, 126, 0.7);
+}
+.iceBackground {
+    background-color: rgba(0, 217, 255, 0.7);
+}
+.dragonBackground {
+    background-color: rgba(61, 16, 185, 0.7);
+}
+.darkBackground {
+    background-color: rgba(21, 7, 43, 0.7);
+}
+.ghostBackground {
+    background-color: rgba(54, 24, 124, 0.7);
+}
+.steelBackground {
+    background-color: rgba(201, 201, 201, 0.7);
+}
+
+

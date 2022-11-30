@@ -1,4 +1,4 @@
-
+import "./NavIcons.css"
 
 export const CartWidget =()=>(
     <img alt="Carrito de compras" src="./images/cart.png" className="carrito"/>
