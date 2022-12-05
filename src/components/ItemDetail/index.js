@@ -10,8 +10,8 @@ const ItemDetail =({pokemon})=>{
             </section>
             <section className='detailsContainer'>
                 <div className='d-FlexRow typesContainer'>
-                    <h5><span className={`${pokemon.types[0].type.name}Background`}>{pokemon.types[0].type.name.toUpperCase()}</span></h5>
-                    {pokemon.types[1]? (<h5><span className={`${pokemon.types[1].type.name}Background`}>{pokemon.types[1].type.name.toUpperCase()}</span></h5>): null}
+                    <h5><p className={`${pokemon.types[0].type.name}Background`}>{pokemon.types[0].type.name.toUpperCase()}</p></h5>
+                    {pokemon.types[1]? (<h5><p className={`${pokemon.types[1].type.name}Background`}>{pokemon.types[1].type.name.toUpperCase()}</p></h5>): null}
                 </div>
                 <h4>${pokemon.base_experience}</h4>
             </section>

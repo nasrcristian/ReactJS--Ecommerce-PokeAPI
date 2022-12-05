@@ -42,8 +42,8 @@
     margin-top: 0px ;
 }
 
-.cardContainer .typesContainer span {
-    width: 7em;
+.cardContainer .typesContainer p {
+    width: fit-content;
     text-align: center;
     display: inline-block;
     border: 0.1em solid black;
@@ -51,6 +51,7 @@
     padding: 0.4em 0.6em 0.6em;
     margin: 0.1em;
     border-radius: 0.4em;
+    font-size: clamp(8px, 100%, 15px);
 }
 
 .grassBackground {
