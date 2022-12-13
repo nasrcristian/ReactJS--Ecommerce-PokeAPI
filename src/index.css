@@ -8,7 +8,7 @@
 }
 
 body{
-  background-color: rgba(7, 136, 97, 0.212);
+  background-color: rgba(104, 192, 233, 0.76);
   }
 
 .d-FlexRow {
@@ -31,6 +31,36 @@ button{
   color: #F3F9D2;
   background: #190686;
 }
+
+
+
+@keyframes loadingMsg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingMsg {
+  background: green;
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  padding: 30px;
+  color: white;
+  font-size: 40px;
+  margin-top: 15%;
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+  box-shadow: 5px 0 green, -5px 0 green, 0 -5px green, 0 5px green, 10px 0 green, -10px 0 green, 0 -10px green, 0 10px green, 0 0 0 5px green, 15px 0 green, -15px 0 green, 0 15px green, 0 -15px green, 0 -5px 0 5px green, 0 5px 0 5px green, 5px 0 0 5px green, -5px 0 0 5px green, 20px 0 green, -20px 0 green, 0 -20px green, 0 20px green, 10px 0 0 5px green, -10px 0 0 5px green, 0 10px 0 5px green, 0 -10px 0 5px green, 0 0 0 10px green;
+}
+
+
+
+
 button:not(.currentBtn):hover {
   color: #190686;
   cursor: pointer;

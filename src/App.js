@@ -16,15 +16,16 @@ const App = ()=>{
     try{
         setLoading(true)
         const promises = []
-        for(let i = 1; i <= 401; i++){
+        for(let i = 1; i <= 494; i++){
             promises.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`).then(res => res.json()))
         }
         const fetchedPokemons = await Promise.all(promises)
         setPokemons(fetchedPokemons)
     } catch(error) {
         console.log(error)
-    } finally {
         setLoading(false)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -32,19 +33,26 @@ const App = ()=>{
       getPokemons()
   }, [])
 
-
-  return(
-    <>
-    {pokemons && (<BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<ItemListContainer greetings="Bienvenido a la PokeStore" pokemons={pokemons}/>}/>
-        <Route path="/pokemon/:id" element={<ItemDetailContainer/>}/>
-        <Route path='/carrito' element={<Carrito/>}/>
-      </Routes>
-    </BrowserRouter>)}
-
-  </>)
+  if (loading){
+    return(
+      <main>
+        <h3 className="loadingMsg">
+          Loading... </h3>
+      </main>
+      )
+  } else {
+    return(
+      <>
+        <BrowserRouter>
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<ItemListContainer greetings="Bienvenido a la PokeStore" pokemons={pokemons}/>}/>
+            <Route path="/pokemon/:id" element={<ItemDetailContainer/>}/>
+            <Route path='/carrito' element={<Carrito/>}/>
+          </Routes>
+        </BrowserRouter>
+      </>)
+  }
   }
 
 export default App;
