@@ -1,7 +1,7 @@
 .navBar{
     display:flex;
     justify-content: space-between;
-    background: rgba(0, 60, 255, 0.473);
+    background: rgba(0, 38, 255, 0.555);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);

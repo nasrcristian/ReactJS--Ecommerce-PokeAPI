@@ -1,0 +1,19 @@
+.searchbarContainer {
+    margin-top: 30px;
+    width: clamp(150px, 85%, 950px);
+}
+
+.searchbar{
+    width:100%;
+    height: 55%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.555);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin: 5px;
+    padding: 5px 15px;
+}
+
+.searchbar::placeholder{
+    color:rgb(39, 0, 0);
+}
+

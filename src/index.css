@@ -17,13 +17,39 @@ body{
 }
 
 button{
-  background: rgba(0, 8, 117, 0.822);;
-  color: rgb(255, 248, 220);
-
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  overflow: hidden;
+  color: #F3F9D2;
+  background: #190686;
 }
-button:hover{
-  background: rgb(255,255,255);
-  background: linear-gradient(40deg, rgba(255,255,255,1) 28%, rgba(255,202,212,1) 61%, rgba(244,172,183,1) 100%);
-  color:rgb(2, 1, 0);
+button:not(.currentBtn):hover {
+  color: #190686;
   cursor: pointer;
 }
+button:hover:not(.currentBtn):after {
+  width: 100%;
+}
+button:not(.currentBtn):after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #F3F9D2;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }

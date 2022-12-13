@@ -1,18 +1,13 @@
-import { ItemDetail } from "../ItemDetail/index"
-import {useState, useEffect} from "react"
-import { useParams } from "react-router-dom"
-
-
-
+import { useLocation } from "react-router-dom"
+import ItemDetail from "../ItemDetail/index"
 const ItemDetailContainer = ()=>{
-    const [pokemons, setPokemons] = useState([])
-    const [loading, setLoading] = useState(false)
-
-
+    const { state } = useLocation()
+    const pokemon = state
     return(
-    <main className="mainContainer">
-            A
-    </main>
-    )}
+        <main className="mainContainer">
+            <ItemDetail pokemon={pokemon} />
+        </main>
+    )
+}
 
 export default ItemDetailContainer

@@ -1,17 +1,19 @@
 import StockCount from '../StockCount/index'
 import "./ItemList.css"
-import { Link } from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 const ItemList =({pokemon})=>{
     // Renderiza una carta con los datos de un pokemon que es enviado por parametro.
+    const navigate = useNavigate()
+    const handleDetail = ()=>{
+        navigate(`/pokemon/${pokemon.id}`, {state: pokemon})
+    }
 
     return(
         <article className={`${pokemon.types[0].type.name}Background cardContainer`}>
-                    <section>
-                        <Link to="/detalle:detalleId">
+                    <section onClick={handleDetail} className="cursor-pointer">
                             <h2>{pokemon.name.toUpperCase()}</h2>
                             <img src={pokemon.sprites.front_default} alt="pokemon front"/>
-                            <button className='stockBtn'>VER DETALLES</button>
-                        </Link>
+                            <button className='stockBtn detailBtn' >VER DETALLES</button>
                     </section>
                     <section className='detailsContainer'>
                         <div className='d-FlexRow typesContainer'>
@@ -20,7 +22,7 @@ const ItemList =({pokemon})=>{
                             {/* Se verifica la existencia del 2do tipo antes de renderizar su tarjeta para que no crashee */}
                         </div>
                         <h4>${pokemon.base_experience}</h4>
-                        <StockCount itemQuantity={parseInt(Math.sqrt(1/pokemon.base_experience) * 40)}/>
+                        <StockCount itemQuantity={parseInt(Math.sqrt(1/pokemon.base_experience) * 40)} pokemon={pokemon}/>
                     </section>
         </article>
     )

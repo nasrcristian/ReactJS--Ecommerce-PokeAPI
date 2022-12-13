@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: clamp(400px, 100vw, 500px);
-    height: 25vh;
+    height: 27vh;
     min-height: 225px;
     background: rgba(255,255,255,0.2);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
@@ -34,7 +34,7 @@
 }
 
 .cardContainer h2 {
-    font-size: 25px;
+    font-size: 23px;
     margin-top: 0px ;
 }
 .cardContainer img {
@@ -42,7 +42,8 @@
     margin-top: 0px ;
 }
 
-.cardContainer .typesContainer p {
+
+.typesContainer p {
     width: fit-content;
     text-align: center;
     display: inline-block;
@@ -100,10 +101,10 @@
     background-color: rgba(61, 16, 185, 0.7);
 }
 .darkBackground {
-    background-color: rgba(21, 7, 43, 0.7);
+    background-color: rgba(27, 16, 44, 0.7);
 }
 .ghostBackground {
-    background-color: rgba(54, 24, 124, 0.7);
+    background-color: rgba(64, 43, 114, 0.7);
 }
 .steelBackground {
     background-color: rgba(201, 201, 201, 0.7);

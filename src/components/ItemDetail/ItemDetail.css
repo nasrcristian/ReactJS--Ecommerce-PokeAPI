@@ -1,0 +1,81 @@
+.cardDetailContainer {
+    width: 80%;
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 20% 70% 10%;
+    align-items: center;
+    height: 60vh;
+    border: 2px solid black;
+}
+
+.cardDetailContainer h2 {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    font-size: 40px;
+    margin-left: 20%;
+}
+
+.cardDetailContainer img {
+    grid-row: 2/3;
+    aspect-ratio: 1/1;
+    width: clamp(280px, 75vw, 500px);
+}
+
+.cardDetailContainer .typesContainer {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    margin-bottom: 5px;
+    display:flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    width: clamp(200px, 100%, 380px)
+}
+
+.cardDetailContainer .typesContainer p{
+    font-size:25px;
+}
+.cardDetailContainer .priceContainer {
+    grid-row: 3/3;
+    grid-column: 2/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.cardDetailContainer .detailContainer {
+    grid-row: 2/3;
+    grid-column: 2/2;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.cardDetailContainer .detailContainer .statContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.cardDetailContainer .statContainer .progressBarContainer{
+    color:rgb(97, 165, 42);
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.548);
+    border-radius:10px;
+    border: solid 1px black;
+}
+.cardDetailContainer .statContainer .progressBarContainer .progressBar{
+    background-color: rgb(248, 87, 38);
+    height: 100%;
+    border-radius:5px;
+    border-left: solid 1px black;
+    width: 30%;
+}
+

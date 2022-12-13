@@ -10,8 +10,3 @@
     background: rgb(35, 118, 190);
     color: rgb(255, 255, 255)
 }
-.currentBtn:hover{
-    background: rgb(35, 118, 190);
-    color: rgb(255, 255, 255);
-    border-radius:10%
-}
