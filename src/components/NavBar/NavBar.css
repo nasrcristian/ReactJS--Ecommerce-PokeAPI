@@ -6,5 +6,7 @@
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     height: 12vh;
+    position: relative;
+    z-index: 4;
 }
 

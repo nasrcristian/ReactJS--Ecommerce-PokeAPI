@@ -1,31 +1,37 @@
-import { useCallback } from "react"
+import { useCallback, useState } from "react"
+import SearchedItem from "../SearchedItem/index"
 import "./Searchbar.css"
 
 
-const Searchbar =()=>{
+const Searchbar =({pokemons})=>{
 
-    const debounce = (func, wait)=>{
-        let timeout
-        return function executedFunction(...args){
-            const later = ()=>{
-                clearTimeout(timeout)
-                func(...args)
-
-            }
-            clearTimeout(timeout)
-            timeout = setTimeout(later, wait)
-        }
+    const [filteredPokemons, setFilteredPokemons] = useState([])
+    const [displayList, setDisplayList] = useState(false)
+    const is_IncludedIn_name = (value, pokemon)=> {
+        // Indica si *value* se encuentra en el nombre del pokemon
+        return(pokemon.name.includes(value))
+    }
+    const is_IncludedIn_type = (value, pokemon)=> {
+        // Indica si *value* se encuentra en el nombre de los tipos del pokemon
+        return(pokemon.types[0].type.name.includes(value) || (pokemon.types[1] && pokemon.types[1].type.name.includes(value)))
     }
 
-    const onHandleChange = useCallback(debounce((e, pokemons)=> {
-        let searchValue = e.target.value
-        console.log("valor de busqueda", searchValue)
-        let filteredPokemon = pokemons.filter()
-    }, 500), [])
+    const onHandleChange = (useCallback((e)=> {
+        let searchValue = e.target.value.toLowerCase()
+        setFilteredPokemons(pokemons.filter(pokemon => (is_IncludedIn_name(searchValue, pokemon) || is_IncludedIn_type(searchValue, pokemon))))
+    }, [filteredPokemons, pokemons]))
+
+
     return(
-    <form className="searchbarContainer">
-        <input type="text" placeholder="Buscar pokemón..." name="searchbar" className="searchbar" onChange={onHandleChange}/>
-    </form>
+    <div className="searchbarContainer">
+        <input type="text" placeholder="Buscar pokemón..." name="searchbar" className="searchbar" onChange={onHandleChange} onFocus={()=> {setDisplayList("d-Block")}} onBlur={()=> {setDisplayList("")}} />
+        {(!filteredPokemons || filteredPokemons.length === pokemons.length)? null: (
+        <ul className={`searchListContainer ${displayList}`}>
+            {filteredPokemons.map((pokemon)=> (
+                <SearchedItem key={pokemon.id} item={pokemon}/>)
+            )}
+        </ul>)}
+    </div>
     )
 }
 

@@ -2,13 +2,13 @@ import Searchbar from "../Searchbar"
 import { CartWidget, Logo } from "../NavIcons/index"
 import "./NavBar.css"
 
-const Navbar =()=>{
+const Navbar =({pokemons})=>{
 
 
     return(
         <nav className="navBar">
             <Logo name="Pokemon Store"/>
-            <Searchbar/>
+            <Searchbar pokemons={pokemons}/>
             <CartWidget />
         </nav>
     )

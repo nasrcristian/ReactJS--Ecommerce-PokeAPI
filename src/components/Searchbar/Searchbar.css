@@ -1,6 +1,6 @@
 .searchbarContainer {
     margin-top: 30px;
-    width: clamp(150px, 85%, 950px);
+    width: clamp(150px, 85%, 1200px);
 }
 
 .searchbar{
@@ -17,3 +17,10 @@
     color:rgb(39, 0, 0);
 }
 
+.searchListContainer{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 18vh;
+    display: none;
+    border-radius: 10px;
+}

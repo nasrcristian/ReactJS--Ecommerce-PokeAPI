@@ -37,14 +37,14 @@ const App = ()=>{
     return(
       <main>
         <h3 className="loadingMsg">
-          Loading... </h3>
+          Cargando... </h3>
       </main>
       )
   } else {
     return(
       <>
         <BrowserRouter>
-          <Navbar/>
+          <Navbar pokemons={pokemons}/>
           <Routes>
             <Route path="/" element={<ItemListContainer greetings="Bienvenido a la PokeStore" pokemons={pokemons}/>}/>
             <Route path="/pokemon/:id" element={<ItemDetailContainer/>}/>
