@@ -35,7 +35,7 @@ body{
   display: block!important;
 }
 
-button{
+button:not(.btnDont){
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -72,14 +72,14 @@ button{
 
 
 
-button:not(.currentBtn):hover {
+button:not(.currentBtn, .btnDont):hover {
   color: #190686;
   cursor: pointer;
 }
-button:hover:not(.currentBtn):after {
+button:hover:not(.currentBtn, .btnDont):after {
   width: 100%;
 }
-button:not(.currentBtn):after {
+button:not(.currentBtn, .btnDont):after {
   content: "";
   position: absolute;
   z-index: -1;

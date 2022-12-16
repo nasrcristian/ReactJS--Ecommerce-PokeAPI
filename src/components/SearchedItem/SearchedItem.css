@@ -1,11 +1,12 @@
 .searchedItemCard{
     background-color: aliceblue;
     border: 1px black solid;
-    height: calc(50% - 8px);
+    height: calc(48% + 1px);
     justify-content: space-around;
-    width:calc(100% - 5px);
+    width:calc(100% - 7px);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-    margin: 5px;
+    margin: 1px;
     align-items: center;
+    display: flex;
 }

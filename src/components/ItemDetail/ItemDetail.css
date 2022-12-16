@@ -33,7 +33,7 @@
     justify-content: center;
     height: 80px;
     align-items: center;
-    width: clamp(200px, 100%, 380px)
+    width: clamp(200px, fit-content, 380px)
 }
 
 .cardDetailContainer .typesContainer p{

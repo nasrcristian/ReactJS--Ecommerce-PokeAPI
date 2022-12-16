@@ -22,7 +22,7 @@ const ItemDetail =({pokemon})=>{
             </section>
             <section className='priceContainer'>
                     <h4>${pokemon.base_experience}</h4>
-                    <StockCount itemQuantity={parseInt(Math.sqrt(1/pokemon.base_experience) * 40)} pokemon={pokemon}/>
+                    <StockCount itemQuantity={pokemon.stockQuantity} pokemon={pokemon}/>
             </section>
         </article>
     )

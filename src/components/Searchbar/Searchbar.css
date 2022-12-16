@@ -20,7 +20,8 @@
 .searchListContainer{
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
     height: 18vh;
-    display: none;
     border-radius: 10px;
+    display: none;
 }

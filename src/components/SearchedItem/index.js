@@ -1,13 +1,8 @@
-import { useNavigate } from "react-router-dom"
 import "./SearchedItem.css"
 
 const SearchedItem = ({item})=>{
-    const navigate = useNavigate()
-    const handleDetail = ()=>{
-        navigate(`/pokemon/${item.id}`, {state: item})
-    }
     return(
-        <li className="d-FlexRow searchedItemCard" onClick={handleDetail}>
+        <>
             <img alt={`${item.name}`} src={item.sprites.front_default}/>
             <p>{item.name.toUpperCase()}</p>
             <div className="typesContainer">
@@ -16,8 +11,8 @@ const SearchedItem = ({item})=>{
                 {/* Se verifica la existencia del 2do tipo antes de renderizar su tarjeta para que no crashee */}
             </div>
             <p>${item.base_experience}</p>
-            <p>STOCK: </p>
-        </li>)
+            <p>STOCK: {item.stockQuantity}</p>
+        </>)
 }
 
 export default SearchedItem

@@ -5,6 +5,7 @@ import { ItemListContainer } from "./components/ItemListContainer/index";
 import {Routes, BrowserRouter, Route} from 'react-router-dom'
 import Carrito from "./components/Carrito/index"
 import ItemDetailContainer from "./components/ItemDetailContainer/index";
+import Prueba from "./components/Prueba"
 
 
 const App = ()=>{
@@ -20,6 +21,9 @@ const App = ()=>{
             promises.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`).then(res => res.json()))
         }
         const fetchedPokemons = await Promise.all(promises)
+        fetchedPokemons.map((pokemon)=> (
+          pokemon.stockQuantity = Math.floor(Math.sqrt(1/pokemon.base_experience) * 40)
+        ))
         setPokemons(fetchedPokemons)
     } catch(error) {
         console.log(error)
@@ -48,7 +52,7 @@ const App = ()=>{
           <Routes>
             <Route path="/" element={<ItemListContainer greetings="Bienvenido a la PokeStore" pokemons={pokemons}/>}/>
             <Route path="/pokemon/:id" element={<ItemDetailContainer/>}/>
-            <Route path='/carrito' element={<Carrito/>}/>
+            <Route path='/carrito' element={<Prueba/>}/>
           </Routes>
         </BrowserRouter>
       </>)
