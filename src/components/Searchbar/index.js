@@ -1,11 +1,13 @@
-import { useState, useMemo} from "react"
+import { useState, useMemo, useContext} from "react"
 import { useNavigate } from "react-router-dom"
+import { PokemonContext } from "../../context/pokemons.context"
 import SearchedItem from "../SearchedItem/index"
 import "./Searchbar.css"
 
 
-const Searchbar =({pokemons})=>{
+const Searchbar =()=>{
 
+    const {pokemons} = useContext(PokemonContext)
     const [query, setQuery] = useState("")
     const [displayList, setDisplayList] = useState("")
     const navigate = useNavigate()

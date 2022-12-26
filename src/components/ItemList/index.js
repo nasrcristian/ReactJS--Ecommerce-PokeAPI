@@ -22,7 +22,7 @@ const ItemList =({pokemon})=>{
                             {/* Se verifica la existencia del 2do tipo antes de renderizar su tarjeta para que no crashee */}
                         </div>
                         <h4>${pokemon.base_experience}</h4>
-                        <StockCount itemQuantity={pokemon.stockQuantity} pokemon={pokemon}/>
+                        <StockCount pokemon={pokemon}/>
                     </section>
         </article>
     )

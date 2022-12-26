@@ -1,38 +1,27 @@
-import {useState} from "react"
+import {useState, useContext, useCallback} from "react"
 import "./StockCounter.css"
-const StockCount = ({itemQuantity, pokemon})=>{
+import { CarritoContext } from "../../context/carrito.context"
+import { PokemonContext } from "../../context/pokemons.context"
+const StockCount = ({pokemon})=>{
 
-    const [count, setCount] = useState(0)
-    const [stock, setStock] = useState(itemQuantity)
+    const {pokemons, setPokemons} = useContext(PokemonContext)
+    const {handleBuy} = useContext(CarritoContext)
 
-    const handleStockOnAdd =()=>{
-        if(stock > 0){
-            setCount(count + 1)
-            setStock(stock - 1)
-        }
-    }
-    const handleStockOnSubstract =()=>{
-        if(count > 0){
-            setCount(count - 1)
-            setStock(stock + 1)
-        }
-    }
+
 
     return(
         <>
-            <h4>STOCK: {stock}</h4>
+            <h4>STOCK: {pokemon.stockQuantity}</h4>
             <div>
-                <button className="stockBtn" onClick={handleStockOnSubstract} > - </button>
+                <button className="stockBtn"
+                onClick={null} > - </button>
                 <span>
-                    {count}
+                    {0}
                 </span>
-                <button className="stockBtn" onClick={handleStockOnAdd}> + </button>
+                <button className="stockBtn" onClick={null}> + </button>
             </div>
             <div>
-                <button className="stockBtn" onClick={()=> {
-                count > 0?
-                console.log(pokemon.name) : console.log("You must add at least one")
-            }}> COMPRAR </button>
+                <button className="stockBtn" onClick={()=> handleBuy(pokemon, 3)}> COMPRAR </button>
             </div>
         </>
     )

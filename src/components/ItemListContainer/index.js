@@ -1,18 +1,17 @@
 import ItemList from '../ItemList/index'
 import ButtonPagination from '../ButtonPagination/index'
-import {useEffect, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import "./ItemListContainer.css"
+import { PokemonContext } from '../../context/pokemons.context'
 
-export const ItemListContainer =({greetings, pokemons})=>{
+export const ItemListContainer =({greetings})=>{
+    const {pokemons} = useContext(PokemonContext)
     const [currentPage, setCurrentPage] = useState([1])
     const [displayedPokemons, setDisplayedPokemons] = useState(pokemons)
     const pokemonsPerPage = 17
 
-
-
     const indexOfLastPokemon = (currentPage * pokemonsPerPage)
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage
-
 
     useEffect(()=>{
         setDisplayedPokemons(pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon))
@@ -24,9 +23,8 @@ export const ItemListContainer =({greetings, pokemons})=>{
         setCurrentPage(number)
         localStorage.setItem("Current Page", `${number}`)
     }
-
-
     const storagedSessionPage = JSON.parse(localStorage.getItem("Current Page"))
+
 
     return(
         <main className="mainContainer">

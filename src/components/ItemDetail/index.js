@@ -22,7 +22,7 @@ const ItemDetail =({pokemon})=>{
             </section>
             <section className='priceContainer'>
                     <h4>${pokemon.base_experience}</h4>
-                    <StockCount itemQuantity={pokemon.stockQuantity} pokemon={pokemon}/>
+                    <StockCount pokemon={pokemon}/>
             </section>
         </article>
     )

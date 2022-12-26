@@ -7,6 +7,6 @@
 }
 
 .currentBtn{
-    background: rgb(35, 118, 190);
-    color: rgb(255, 255, 255)
+    background: rgb(35, 118, 190)!important;
+    color: rgb(255, 255, 255)!important;
 }
