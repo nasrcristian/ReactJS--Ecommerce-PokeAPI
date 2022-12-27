@@ -34,10 +34,9 @@ const Searchbar =()=>{
                     navigate(`/pokemon/${e.relatedTarget.value}`, {state: pokemons[e.relatedTarget.value-1]})
                 }
             setDisplayList("")}}>
-
-        <input type="search" placeholder="Buscar pokemón..." name="searchbar" className="searchbar" value={query} onChange={(e) => {setQuery(e.target.value)}} autoComplete="off"/>
+            <input type="search" placeholder="Buscar pokemón..." name="searchbar" className="searchbar" value={query} onChange={(e) => {setQuery(e.target.value)}} autoComplete="off"/>
             {(!filteredPokemons)? null:
-                <ul className={`searchListContainer ${displayList}`}>
+            <ul className={`searchListContainer ${displayList}`}>
                 {filteredPokemons.map((pokemon)=> (
                     <button key={pokemon.id} value={pokemon.id} className={`btnDont searchedItemCard`}>
                         <SearchCard key={pokemon.id} item={pokemon}/>

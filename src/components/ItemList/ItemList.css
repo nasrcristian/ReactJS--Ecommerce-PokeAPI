@@ -19,7 +19,7 @@
 }
 
 .cardContainer section{
-    padding: 15px ;
+    padding: 12px ;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,7 +52,7 @@
     padding: 0.4em 0.6em 0.6em;
     margin: 0.1em;
     border-radius: 0.4em;
-    font-size: clamp(8px, 100%, 15px);
+    font-size: clamp(6px, 10vw, 90%);
 }
 
 .grassBackground {

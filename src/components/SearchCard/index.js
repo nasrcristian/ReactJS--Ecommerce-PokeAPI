@@ -11,7 +11,7 @@ const SearchCard = ({item})=>{
                 {/* Se verifica la existencia del 2do tipo antes de renderizar su tarjeta para que no crashee */}
             </div>
             <p>${item.base_experience}</p>
-            <p>STOCK: {item.stockQuantity}</p>
+            <p className="searchCardStock">STOCK: {item.stockQuantity}</p>
         </>)
 }
 
