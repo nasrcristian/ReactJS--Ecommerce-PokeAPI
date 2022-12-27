@@ -1,7 +1,7 @@
 .searchedItemCard{
     background-color: aliceblue;
     border: 1px black solid;
-    height: calc(48% + 1px);
+    height: 82px;
     justify-content: space-around;
     width:calc(100% - 7px);
     border-radius: 10px;

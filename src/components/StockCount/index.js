@@ -13,8 +13,7 @@ const StockCount = ({pokemon})=>{
         <>
             <h4>STOCK: {pokemon.stockQuantity}</h4>
             <div>
-                <button className="stockBtn"
-                onClick={null} > - </button>
+                <button className="stockBtn" onClick={null} > - </button>
                 <span>
                     {0}
                 </span>

@@ -1,7 +1,7 @@
 import { useState, useMemo, useContext} from "react"
 import { useNavigate } from "react-router-dom"
 import { PokemonContext } from "../../context/pokemons.context"
-import SearchedItem from "../SearchedItem/index"
+import SearchCard from "../SearchCard/index"
 import "./Searchbar.css"
 
 
@@ -40,7 +40,7 @@ const Searchbar =()=>{
                 <ul className={`searchListContainer ${displayList}`}>
                 {filteredPokemons.map((pokemon)=> (
                     <button key={pokemon.id} value={pokemon.id} className={`btnDont searchedItemCard`}>
-                        <SearchedItem key={pokemon.id} item={pokemon}/>
+                        <SearchCard key={pokemon.id} item={pokemon}/>
                     </button>))}
                 </ul>}
     </form>

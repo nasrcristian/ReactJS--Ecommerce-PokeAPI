@@ -8,7 +8,7 @@
     grid-template-columns: 40% 60%;
     grid-template-rows: 20% 70% 10%;
     align-items: center;
-    height: 60vh;
+    height: 60%;
     border: 2px solid black;
 }
 

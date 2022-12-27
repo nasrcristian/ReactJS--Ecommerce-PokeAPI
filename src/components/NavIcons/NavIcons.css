@@ -1,9 +1,11 @@
+
 .logoContainer h2 {
     margin-left: 15px;
     margin-top: 30px;
     color:black;
     font-size: 16px;
 }
+
 .logoContainer {
     text-decoration: none;
     border: 1px solid black;
@@ -21,8 +23,52 @@
     height: 68px;
     margin-top: 5px;
 }
+
+.carritoContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto 1%;
+
+}
+
 .carrito{
-    width: 60px;
-    height: 60px;
-    margin: 2vh 2vw;
+    width: 2vw;
+    max-width: 48px;
+    min-width: 30px;
+    height: 2vw;
+    max-height: 48px;
+    min-height: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    box-shadow: 10px 10px 208px -68px rgba(186,0,0,0.75) inset;
+    -webkit-box-shadow: 10px 10px 208px -68px rgba(186,0,0,0.75) inset;
+    -moz-box-shadow: 10px 10px 208px -68px rgba(186,0,0,0.75) inset;
+    max-width: 90px;
+    width: 4vw;
+    min-width: 70px;
+    max-height: 80px;
+    height:4vw;
+    min-height: 70px;
+    padding: 15px 0;
+    padding-left: 12px;
+    padding-right: 15px;
+}
+
+@media (max-width: 600px){
+    .logoContainer{
+        padding-right:0;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        margin-top:25px;
+        align-items: center;
+        padding-bottom:17px ;
+    }
+    .logoContainer h2{
+        display: none;
+    }
 }

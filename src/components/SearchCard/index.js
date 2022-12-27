@@ -1,6 +1,6 @@
-import "./SearchedItem.css"
+import "./SearchCard.css"
 
-const SearchedItem = ({item})=>{
+const SearchCard = ({item})=>{
     return(
         <>
             <img alt={`${item.name}`} src={item.sprites.front_default}/>
@@ -15,4 +15,4 @@ const SearchedItem = ({item})=>{
         </>)
 }
 
-export default SearchedItem
+export default SearchCard

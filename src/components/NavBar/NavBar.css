@@ -5,7 +5,7 @@
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
-    height: 12vh;
+    height: 108px;
     position: relative;
     z-index: 4;
 }

@@ -3,9 +3,10 @@ import React, {useState, useEffect} from "react";
 import Navbar from "./components/NavBar/index";
 import { ItemListContainer } from "./components/ItemListContainer/index";
 import {Routes, Route} from 'react-router-dom'
-import ItemDetailContainer from "./components/ItemDetailContainer/index";
+import ItemDetailContainer from "./components/ItemDetail/index";
 import { PokemonContext } from "./context/pokemons.context";
 import { CarritoContextProvider } from "./context/carrito.context";
+import ItemDetail from "./components/ItemDetail/index";
 
 
 const App = ()=>{
@@ -35,7 +36,6 @@ const App = ()=>{
 
 
 
-
   if (pokemons.length === 0){
     return(
       <main>
@@ -50,7 +50,7 @@ const App = ()=>{
           <Navbar/>
             <Routes>
                 <Route path="/" element={<ItemListContainer greetings="Bienvenido a la PokeStore"/>}/>
-                <Route path="/pokemon/:id" element={<ItemDetailContainer/>}/>
+                <Route path="/pokemon/:id" element={<ItemDetail/>}/>
             </Routes>
           </CarritoContextProvider>
       </PokemonContext.Provider>)

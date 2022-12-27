@@ -6,14 +6,13 @@ import { CarritoContext } from "../../context/carrito.context"
 
 const Navbar =()=>{
 
-    const {cart} = useContext(CarritoContext)
+
 
     return(
         <nav className="navBar">
             <Logo name="Pokemon Store"/>
             <Searchbar/>
             <CartWidget />
-            <p>{cart.length}</p>
         </nav>
     )
 }
