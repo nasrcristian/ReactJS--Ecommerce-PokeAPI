@@ -1,6 +1,7 @@
 .cardContainer {
     display: flex;
     justify-content: space-between;
+    /* width: max-content; */
     width: clamp(400px, 90vw, 500px);
     height: 254px;
     min-height: 225px;

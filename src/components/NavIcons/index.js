@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom"
 import "./NavIcons.css"
 
 export const CartWidget =()=>(
-    <div className="carritoContainer">
+    <NavLink className="carritoContainer">
         <img alt="Carrito de compras" src="./images/cart.png" className="carrito"/>
-    </div>
+    </NavLink>
 )
 
 export const Logo =({name})=>(

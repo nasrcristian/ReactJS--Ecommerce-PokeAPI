@@ -6,7 +6,7 @@ import StockCount from "../StockCount";
 const ItemDetail = () => {
     const { state } = useLocation();
     const pokemon = state;
-
+    console.log(pokemon)
     return (
         <main className="mainContainer">
             <article className={`${pokemon.types[0].type.name}Background cardDetailContainer`}>
@@ -29,12 +29,12 @@ const ItemDetail = () => {
                 </section>
                 <section className="detailContainer">
                     {pokemon.stats.map((stat) => (
-                        <div key={stat.stat.name} className="statContainer">
-                        <p>{stat.stat.name.toUpperCase()}</p>
+                        <div key={stat.name} className="statContainer">
+                        <p>{stat.name.toUpperCase()}</p>
                         <div className="progressBarContainer">
                             <div
                             className="progressBar"
-                            style={{ width: `${(stat.base_stat / 250) * 100}%` }}
+                            style={{ width: `${(stat.base_stat / 2.5)}%` }}
                             ></div>
                         </div>
                         <span>{stat.base_stat}</span>

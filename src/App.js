@@ -3,7 +3,6 @@ import React, {useState, useEffect} from "react";
 import Navbar from "./components/NavBar/index";
 import { ItemListContainer } from "./components/ItemListContainer/index";
 import {Routes, Route} from 'react-router-dom'
-import ItemDetailContainer from "./components/ItemDetail/index";
 import { PokemonContext } from "./context/pokemons.context";
 import { CarritoContextProvider } from "./context/carrito.context";
 import ItemDetail from "./components/ItemDetail/index";
@@ -21,10 +20,21 @@ const App = ()=>{
             promises.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`).then(res => res.json()))
         }
         const fetchedPokemons = await Promise.all(promises)
-        fetchedPokemons.map((pokemon)=> (
-          pokemon.stockQuantity = Math.floor(Math.sqrt(1/pokemon.base_experience) * 40)
-        ))
-        setPokemons(fetchedPokemons)
+        const modifiedPokemons = fetchedPokemons.map((pokemon)=> (
+          {id: pokemon.id,
+          name: pokemon.name,
+          sprites: pokemon.sprites,
+          types: pokemon.types,
+          base_experience: pokemon.base_experience,
+          stockQuantity: Math.floor(Math.sqrt(1/pokemon.base_experience) * 40),
+          stats:
+            [{base_stat: pokemon.stats[0].base_stat, name: "HP"},
+            {base_stat: pokemon.stats[1].base_stat, name: "ATK"},
+            {base_stat: pokemon.stats[2].base_stat, name: "DEF"},
+            {base_stat: pokemon.stats[3].base_stat, name: "SP-A"},
+            {base_stat: pokemon.stats[4].base_stat, name: "SP-D"},
+            {base_stat: pokemon.stats[5].base_stat, name: "SPEED"}] }))
+        setPokemons(modifiedPokemons)
     } catch(error) {
         console.log(error)
     }

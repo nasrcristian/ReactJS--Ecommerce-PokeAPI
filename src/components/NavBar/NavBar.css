@@ -1,12 +1,13 @@
 .navBar{
     display:flex;
     justify-content: space-between;
-    background: rgba(0, 38, 255, 0.555);
+    background: rgba(98, 0, 255, 0.55);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2.2px);
+    -webkit-backdrop-filter: blur(2.2px);
     height: 108px;
     position: relative;
     z-index: 4;
+
 }
 

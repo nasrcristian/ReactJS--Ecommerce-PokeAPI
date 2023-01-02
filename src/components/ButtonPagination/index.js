@@ -2,7 +2,7 @@ import "./ButtonPagination.css"
 
 const ButtonPagination = ({current, pokemonsPerPage, totalPokemons, paginate })=>{
     const pageNumbers = []
-    for(let i = current-3 > 0? current - 3: 1; i < ((current + 3) >= (totalPokemons / pokemonsPerPage)?  totalPokemons / pokemonsPerPage: current + 3); i++){
+    for(let i = current-3 > 0? current - 3: 1; i < ((current + 3) >= (totalPokemons / pokemonsPerPage)?  totalPokemons / pokemonsPerPage: current + 4); i++){
         pageNumbers.push(i)
     }
     return(

@@ -48,32 +48,12 @@ button:not(.btnDont){
   z-index: 0;
   overflow: hidden;
   color: #F3F9D2;
-  background: #190686;
+  background: #2c0686;
 }
-
-
-
-.loadingMsg {
-  background: green;
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  padding: 30px;
-  color: white;
-  font-size: 40px;
-  margin-top: 15%;
-  margin-left: 25%;
-  width: 50%;
-  text-align: center;
-  box-shadow: 5px 0 green, -5px 0 green, 0 -5px green, 0 5px green, 10px 0 green, -10px 0 green, 0 -10px green, 0 10px green, 0 0 0 5px green, 15px 0 green, -15px 0 green, 0 15px green, 0 -15px green, 0 -5px 0 5px green, 0 5px 0 5px green, 5px 0 0 5px green, -5px 0 0 5px green, 20px 0 green, -20px 0 green, 0 -20px green, 0 20px green, 10px 0 0 5px green, -10px 0 0 5px green, 0 10px 0 5px green, 0 -10px 0 5px green, 0 0 0 10px green;
-}
-
-
-
 
 
 button:not(.currentBtn, .btnDont):hover {
-  color: #190686;
+  color: #2c0686;
   cursor: pointer;
 }
 button:hover:not(.currentBtn, .btnDont):after {
@@ -94,3 +74,19 @@ button:not(.currentBtn, .btnDont):after {
   .cursor-pointer {
     cursor: pointer;
   }
+
+  .loadingMsg {
+    background: green;
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    padding: 30px;
+    color: white;
+    font-size: 4vw;
+    margin-top: 15%;
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+    box-shadow: 5px 0 green, -5px 0 green, 0 -5px green, 0 5px green, 10px 0 green, -10px 0 green, 0 -10px green, 0 10px green, 0 0 0 5px green, 15px 0 green, -15px 0 green, 0 15px green, 0 -15px green, 0 -5px 0 5px green, 0 5px 0 5px green, 5px 0 0 5px green, -5px 0 0 5px green, 20px 0 green, -20px 0 green, 0 -20px green, 0 20px green, 10px 0 0 5px green, -10px 0 0 5px green, 0 10px 0 5px green, 0 -10px 0 5px green, 0 0 0 10px green;
+  }
+
