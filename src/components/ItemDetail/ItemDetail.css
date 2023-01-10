@@ -10,6 +10,8 @@
     align-items: center;
     height: max-content;
     border: 2px solid black;
+    margin-bottom: 80px;
+    text-transform: uppercase;
 }
 
 .cardDetailContainer h2 {
@@ -22,7 +24,7 @@
 .cardDetailContainer img {
     grid-row: 2/3;
     aspect-ratio: 1/1;
-    width: 100%;
+    width: 90%;
     min-width: 300px;
 }
 
@@ -132,7 +134,7 @@
 
 @media (width < 548px){
     .cardDetailContainer .detailContainer{
-        padding: 0;
+        padding: 10px;
     }
 }
 

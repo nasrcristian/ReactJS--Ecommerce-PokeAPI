@@ -31,11 +31,15 @@ body{
   flex-direction: row!important;
 }
 
+.d-None {
+  display: none!important;
+}
+
 .d-Block {
   display: block!important;
 }
 
-button:not(.btnDont){
+button:not(.btnNot){
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -52,14 +56,14 @@ button:not(.btnDont){
 }
 
 
-button:not(.currentBtn, .btnDont):hover {
+button:not(.currentBtn, .btnNot):hover {
   color: #2c0686;
   cursor: pointer;
 }
-button:hover:not(.currentBtn, .btnDont):after {
+button:hover:not(.currentBtn, .btnNot):after {
   width: 100%;
 }
-button:not(.currentBtn, .btnDont):after {
+button:not(.currentBtn, .btnNot):after {
   content: "";
   position: absolute;
   z-index: -1;

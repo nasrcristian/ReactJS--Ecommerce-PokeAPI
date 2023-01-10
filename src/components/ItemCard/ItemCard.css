@@ -11,7 +11,8 @@
     display: flex;
 }
 .searchedItemCard p{
-margin: 0 5px;
+    margin: 0 5px;
+    text-transform: uppercase;
 }
 
 @media (width <= 930px){
@@ -24,7 +25,7 @@ margin: 0 5px;
     }
 }
 @media (width <= 686px){
-    .searchCardStock{
+    .itemCardStock{
         display: none;
     }
 }

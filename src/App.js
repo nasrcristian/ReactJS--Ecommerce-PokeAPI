@@ -25,8 +25,8 @@ const App = ()=>{
           name: pokemon.name,
           sprites: pokemon.sprites,
           types: pokemon.types,
-          base_experience: pokemon.base_experience,
-          stockQuantity: Math.floor(Math.sqrt(1/pokemon.base_experience) * 40),
+          quantity: Math.floor(Math.sqrt(1/pokemon.base_experience) * 40),
+          price: pokemon.base_experience,
           stats:
             [{base_stat: pokemon.stats[0].base_stat, name: "HP"},
             {base_stat: pokemon.stats[1].base_stat, name: "ATK"},
@@ -59,7 +59,7 @@ const App = ()=>{
           <CarritoContextProvider>
           <Navbar/>
             <Routes>
-                <Route path="/" element={<ItemListContainer greetings="Bienvenido a la PokeStore"/>}/>
+                <Route path="/" element={<ItemListContainer greetings="Bienvenido a la tienda"/>}/>
                 <Route path="/pokemon/:id" element={<ItemDetail/>}/>
             </Routes>
           </CarritoContextProvider>

@@ -1,11 +1,18 @@
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { CarritoContext } from "../../context/carrito.context"
 import "./NavIcons.css"
 
-export const CartWidget =()=>(
-    <NavLink className="carritoContainer">
+export const CartButton =()=>{
+
+    const {setDisplayCart, displayCart} = useContext(CarritoContext)
+
+    return(
+    <div className="carritoContainer" onClick={()=> displayCart === "d-None"? setDisplayCart(""): setDisplayCart("d-None") }>
         <img alt="Carrito de compras" src="./images/cart.png" className="carrito"/>
-    </NavLink>
-)
+    </div>
+    )
+}
 
 export const Logo =({name})=>(
     <NavLink to="/"className="logoContainer d-FlexRow">
